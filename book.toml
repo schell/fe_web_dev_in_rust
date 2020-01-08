@@ -1,0 +1,6 @@
+[book]
+authors = ["Schell Scivally"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Frontend Web Development in Rust"
