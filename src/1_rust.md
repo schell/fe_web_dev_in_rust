@@ -18,3 +18,8 @@ Coincedentally Mozilla was also heavily involved in the development of JavaScrip
 [Netscape Communications Corporation](https://en.wikipedia.org/wiki/Netscape).
 
 ![early mozilla mascot](https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Mozilla_boxing.jpg/175px-Mozilla_boxing.jpg)
+
+People who write Rust are endearingly called "Rustaceans".
+
+[Rust has a (unofficial) mascot named Ferris.](https://www.rustacean.net/)
+![ferris the crab](https://www.rustacean.net/assets/rustacean-orig-noshadow.png)
