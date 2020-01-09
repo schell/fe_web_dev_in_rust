@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>web-sys-examples</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="pkg/web_sys_examples.js"></script>
+        <script type=module>
+         window
+             .wasm_bindgen('pkg/web_sys_examples_bg.wasm')
+             .then( m => m.main() )
+             .catch(console.error);
+        </script>
+    </body>
+</html>

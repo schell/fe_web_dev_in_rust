@@ -2,9 +2,11 @@
 Like C and C++, Rust supports passing values by value or by reference. A
 reference is a pointer to a value. Unlike those languages, passing a value
 "invokes" the borrow checker. The borrow checker ensures that no more than one
-mutable reference to a value is obtained at any one
-time:
-```rust, editable
+mutable reference to a value is obtained at any one time. This prevents a lot of
+bugs. To pass a value by reference, prefix the name with `&`. To pass a value by
+_mutable_ reference, prefix the name with `&mut`:
+
+```rust
 fn add_one_mut(x: &mut i32) {
   // Here we dereference the variable to add one to its value
   *x += 1;
@@ -19,6 +21,7 @@ fn main() {
 ```
 
 Here we'll try to hold one mutable reference and pass another at the same time:
+
 ```rust, editable
 fn add_one_mut(x: &mut i32) {
   *x += 1;
@@ -26,8 +29,13 @@ fn add_one_mut(x: &mut i32) {
 
 fn main() {
   let mut x = 6;
+
+  // Hold a mutable ref to x
   let may_mut_x:Option<&mut i32> = Some(&mut x);
-  add_one_mut(&mut x);
+
+  // Remove the comment on the next line...
+  // add_one_mut(&mut x);
+
   println!("Hello {:?}", may_mut_x);
 }
 ```
@@ -35,7 +43,7 @@ fn main() {
 But you may have as many immutable references as you like, so long as none of
 those references try to "outlive" the original value.
 
-```rust, editable
+```rust
 /// Returns one plus the value of the reference passed
 fn add_one(x: &i32) -> i32 {
   *x + 1

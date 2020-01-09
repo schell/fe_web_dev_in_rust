@@ -23,3 +23,5 @@ People who write Rust are endearingly called "Rustaceans".
 
 [Rust has a (unofficial) mascot named Ferris.](https://www.rustacean.net/)
 ![ferris the crab](https://www.rustacean.net/assets/rustacean-orig-noshadow.png)
+
+[Get Rust!](https://rustup.rs/)
