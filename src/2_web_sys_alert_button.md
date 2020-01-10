@@ -1,4 +1,4 @@
-# Alert with button
+# Alert with button ⚙️
 
 Now let's look at building some DOM.
 

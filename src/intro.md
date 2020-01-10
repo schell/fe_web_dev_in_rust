@@ -3,10 +3,13 @@ Welcome to a tutorial about writing front end web applications using Rust.
 Roughly I've broken this up into a couple sections:
 
 - [A hard and fast introduction to Rust](./1_rust.md)
-- A hard and fast introduction to Rust-to-WASM compilation and using
-  [web-sys](https://crates.io/crates/web-sys) to write Rust that runs in the
+- [A hard and fast introduction to Rust-to-WASM](./2_browser.md) compilation and
+  using [web-sys](https://crates.io/crates/web-sys) to write Rust that runs in the
   browser.
-- A tour of libraries and frameworks to use that make application development
-  generally easier (I hope).
+- [A tour of a few libraries and frameworks](./3_frameworks.md) to use that make
+  application development generally easier (I hope).
+
+This guide is being tentatively hosted at
+[schell.github.io/intro-to-rust-web-dev](http://schell.github.io/intro-to-rust-web/).
 
 Let's dive in! 🏊🏽

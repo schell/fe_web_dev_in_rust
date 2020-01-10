@@ -3,7 +3,7 @@
 Just like in C++ and Java, Rust has methods. Methods are functions that appear
 to "live inside" the data they operate on.
 
-```rust
+```rust, editable
 struct Circle {
     x: f64,
     y: f64,

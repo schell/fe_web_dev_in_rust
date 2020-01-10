@@ -8,7 +8,7 @@ anonymous functions as parameters to other functions.
 ```rust, editable
 fn main() {
   let add_one =
-    |x: &i32| {
+    |x: &i32| -> i32 {
       *x + 1
     };
 
@@ -60,7 +60,7 @@ fn main() {
 
 Try a filter before the sum:
 
-```rust
+```rust, editable
 fn main() {
   let items:Vec<i32> = vec![0, 1, 2, 3];
   let sum =

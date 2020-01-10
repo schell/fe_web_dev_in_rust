@@ -38,6 +38,7 @@ let (tx, rx) =
   );
 
 button()
+  .style("cursor", "pointer")
   .rx_text("Clicked 0 times", rx)
   .tx_on("click", tx)
   .build().unwrap()
@@ -87,6 +88,7 @@ impl Component for Button {
     rx: Receiver<ButtonOut>
   ) -> GizmoBuilder {
     button()
+      .style("cursor", "pointer")
       .rx_text("Clicked 0 times", rx.branch_map(|msg| {
         match msg {
           ButtonOut::Clicks(n) => format!("Clicked {} times", n)

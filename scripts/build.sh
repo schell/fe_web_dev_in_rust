@@ -24,6 +24,9 @@ fi
 
 echo "Building web-sys-examples w/ wasm-pack..."
 wasm-pack build --release --target no-modules web-sys-examples || exit 1
-cp -R web-sys-examples book/
+mkdir -p book/web-sys-examples
+cp -R web-sys-examples/pkg book/web-sys-examples/
+cp web-sys-examples/index.html book/web-sys-examples/index.html
+cp web-sys-examples/style.css book/web-sys-examples/style.css
 
 echo "Done building on ${GITHUB_REF}"
