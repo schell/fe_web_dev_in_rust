@@ -47,6 +47,10 @@ features = [
   "Window",
 ]
 
+[dependencies.mogwai]
+git = "https://github.com/schell/mogwai.git"
+rev = "99be3abceaf5c8ed66749ff43846ae9e8531a77b"
+
 [dev-dependencies]
 wasm-bindgen-test = "0.2"
 
