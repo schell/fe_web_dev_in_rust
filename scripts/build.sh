@@ -51,5 +51,5 @@ cp web-sys-examples/index.html book/web-sys-examples/index.html
 cp web-sys-examples/style.css book/web-sys-examples/style.css
 mv book intro-to-rust-web || exit 1
 zip -r intro-to-rust-web.zip intro-to-rust-web || exit 1
-
+ls -lah intro-to-rust-web.zip
 echo "Done building on ${GITHUB_REF}"
