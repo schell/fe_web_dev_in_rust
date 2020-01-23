@@ -61,4 +61,4 @@ jobs:
         source scripts/ci.sh
         tag=`basename ${{ github.ref }}`
         create_release schell fe_web_dev_in_rust ${{ secrets.GITHUB_TOKEN }} $tag || exit 1
-        upload_release_file ${{ secrets.GITHUB_TOKEN }} intro-to-rust-web.zip intro-to-rust-web.zip || exit 1
+        upload_release_file ${{ secrets.GITHUB_TOKEN }} intro-to-rust-web.tar.gz intro-to-rust-web.tar.gz || exit 1

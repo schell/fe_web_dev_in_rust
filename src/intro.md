@@ -9,7 +9,12 @@ Roughly I've broken this up into a couple sections:
 - [A tour of a few libraries and frameworks](./3_frameworks.md) to use that make
   application development generally easier (I hope).
 
-This guide is being tentatively hosted at
-[schell.github.io/intro-to-rust-web-dev](http://schell.github.io/intro-to-rust-web/).
+This guide is being hosted at [zyghost.com/intro-to-rust-web-dev][zyghost guide].
+
+If you'd like to make a contribution you can edit this guide at its [github repo]
+and submit a pull request. :)
 
 Let's dive in! 🏊🏽
+
+[zyghost guide]: http://zyghost.com/guides/intro-to-rust-web/
+[github repo]: https://github.com/schell/fe_web_dev_in_rust
