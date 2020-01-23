@@ -22,11 +22,24 @@ else
     echo "  done installing wasm-pack."
 fi
 
+if hash mdbook 2>/dev/null; then
+    echo "Have mdbook, skipping installation..."
+else
+    echo "Installing mdbook..."
+    cargo install mdbook
+    echo "  done installing mdbook."
+fi
+
+echo "Building the book"
+mdbook build
+
 echo "Building web-sys-examples w/ wasm-pack..."
-wasm-pack build --release --target no-modules web-sys-examples || exit 1
 mkdir -p book/web-sys-examples
+wasm-pack build --release --target no-modules web-sys-examples || exit 1
 cp -R web-sys-examples/pkg book/web-sys-examples/
 cp web-sys-examples/index.html book/web-sys-examples/index.html
 cp web-sys-examples/style.css book/web-sys-examples/style.css
+mv book intro-to-rust-web || exit 1
+zip -r intro-to-rust-web.zip intro-to-rust-web || exit 1
 
 echo "Done building on ${GITHUB_REF}"
