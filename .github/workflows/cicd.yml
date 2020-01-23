@@ -39,7 +39,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ~/.cargo/git
-        key: ${{ runner.os }}-cargo-index-${{ hashFiles('Cargo.lock') }}
+        key: ${{ runner.os }}-cargo-index-${{ hashFiles('web-sys-examples/Cargo.lock') }}
         restore-keys: |
           ${{ runner.os }}-cargo-index-
 
