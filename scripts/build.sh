@@ -30,6 +30,16 @@ else
     echo "  done installing mdbook."
 fi
 
+if hash jq 2>/dev/null; then
+    echo "Have jq, skipping installation..."
+else
+    echo "Installing jq"
+    wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+    chmod 755 jq-linux64
+    mv jq-linux64 $HOME/cargo/bin/jq
+    echo "  done installing jq."
+fi
+
 echo "Building the book"
 mdbook build
 

@@ -1,2 +1,6 @@
 book
 target
+release.json
+upload.json
+secrets.txt
+intro-to-rust-web*
