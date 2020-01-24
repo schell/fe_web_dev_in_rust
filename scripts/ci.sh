@@ -35,8 +35,8 @@ upload_release_file() {
       curl -s -o upload.json -w '%{http_code}' \
            --request POST \
            --header 'authorization: Bearer ${token}' \
-           --header 'content-type: application/gzip' \
-           --data '@${file}'
+           --header 'Content-Type: application/octet-stream' \
+           --data-binary @\"${file}\"
            ${url}?name=${name}"
     http_code=`eval $command`
     if [ $http_code == "201" ]; then
