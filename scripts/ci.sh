@@ -35,7 +35,7 @@ upload_release_file() {
       curl -s -o upload.json -w '%{http_code}' \
            --request POST \
            --header 'authorization: Bearer ${token}' \
-           --header 'content-type: application/zip' \
+           --header 'content-type: application/gzip' \
            --data '@${file}'
            ${url}?name=${name}"
     http_code=`eval $command`

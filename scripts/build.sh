@@ -50,6 +50,8 @@ cp -R web-sys-examples/pkg book/web-sys-examples/
 cp web-sys-examples/index.html book/web-sys-examples/index.html
 cp web-sys-examples/style.css book/web-sys-examples/style.css
 mv book intro-to-rust-web || exit 1
-tar -czvf intro-to-rust-web.tar.gz intro-to-rust-web || exit 1
+sleep 1
+tar czvf intro-to-rust-web.tar.gz intro-to-rust-web || exit 1
+sleep 1
 ls -lah intro-to-rust-web.tar.gz
 echo "Done building on ${GITHUB_REF}"
