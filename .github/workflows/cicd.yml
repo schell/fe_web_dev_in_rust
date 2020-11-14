@@ -51,14 +51,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-cargo-build-target-
 
-
     - name: build
       run: scripts/build.sh
 
     - name: release
-      if: startsWith(github.ref, 'refs/tags/')
+      if: endsWith(github.ref, 'master')
       run: |
-        source scripts/ci.sh
-        tag=`basename ${{ github.ref }}`
-        create_release schell fe_web_dev_in_rust ${{ secrets.GITHUB_TOKEN }} $tag || exit 1
-        upload_release_file ${{ secrets.GITHUB_TOKEN }} intro-to-rust-web.tar.gz intro-to-rust-web.tar.gz || exit 1
+        aws s3 sync s3://preview.zyghost.com/guides/intro-to-rust-web/ book/
+        aws s3 sync s3://zyghost.com/guides/intro-to-rust-web/ book/
