@@ -9,7 +9,7 @@ Roughly I've broken this up into a couple sections:
 - [A tour of a few libraries and frameworks](./3_frameworks.md) to use that make
   application development generally easier (I hope).
 
-This guide is being hosted at [zyghost.com][z]. I occasionally
+This guide is being hosted at [zyghost.com]. I occasionally
 write things and put them there.
 
 If you'd like to make a contribution you can edit this guide at its [github repo]
