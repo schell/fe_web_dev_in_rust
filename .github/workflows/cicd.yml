@@ -61,5 +61,5 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       run: |
-        aws s3 sync s3://preview.zyghost.com/guides/intro-to-rust-web/ book/
-        aws s3 sync s3://zyghost.com/guides/intro-to-rust-web/ book/
+        aws s3 sync book/ s3://preview.zyghost.com/guides/intro-to-rust-web/
+        aws s3 sync book/ s3://zyghost.com/guides/intro-to-rust-web/
